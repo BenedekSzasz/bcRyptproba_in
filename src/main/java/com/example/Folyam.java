@@ -49,5 +49,17 @@ public class Folyam {
 
         int sum3 = list.stream().reduce(0, Integer::sum);
         System.out.println("Összeg: " + sum3);
+
+        double average = list.stream()
+            .mapToInt(Integer::intValue)
+            .average()
+            .orElse(0);
+        System.out.println("Átlag: " + average);
+
+        double doubleAverage = doublelist.stream()
+            .mapToDouble(x -> x)
+            .average()
+            .orElse(0.0);
+        System.out.println("Átlag: " + doubleAverage);
     }
 }
