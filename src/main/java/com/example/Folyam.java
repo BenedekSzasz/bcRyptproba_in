@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.List;
+import java.util.OptionalInt;
 
 public class Folyam {
     public static void main(String [] args) {
@@ -61,5 +62,11 @@ public class Folyam {
             .average()
             .orElse(0.0);
         System.out.println("Átlag: " + doubleAverage);
+
+        int max =list.stream().mapToInt(x -> x).max().orElse(0);
+        System.out.println("Max: " + max);
+
+        OptionalInt maxOpt = list.stream().mapToInt(x -> x).max();
+        System.out.println("Max: " + maxOpt.getAsInt());
     }
 }
