@@ -68,5 +68,8 @@ public class Folyam {
 
         OptionalInt maxOpt = list.stream().mapToInt(x -> x).max();
         System.out.println("Max: " + maxOpt.getAsInt());
+
+        long count = list.stream().mapToInt(x -> x).count();
+        System.out.println("Darab: " + count);
     }
 }
