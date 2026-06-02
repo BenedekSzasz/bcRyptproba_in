@@ -18,6 +18,14 @@
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
         </dependency>
+        <dependencies>
+    <dependency>
+        <groupId>jakarta.streams</groupId>
+        <artifactId>jakarta.streams:jdk.streams.basic</artifactId>
+        <version>1.0.4</version>
+    </dependency>
+</dependencies>
     </dependencies>
+    
 
 </project>

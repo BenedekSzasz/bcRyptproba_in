@@ -1,5 +1,5 @@
 package com.example;
-
+// import java.util.stream.IntSummaryStatistics;
 import java.util.List;
 import java.util.OptionalInt;
 
@@ -71,5 +71,12 @@ public class Folyam {
 
         long count = list.stream().mapToInt(x -> x).count();
         System.out.println("Darab: " + count);
+
+        // IntSummaryStatistics all = list.stream().mapToInt(x -> x).summaryStatistics();
+        // System.out.println(all.getAverage());
+
+        //Szegediek számolása
+        long szegedCount = empList.stream().filter(emp -> emp.getCity().equals("Szeged")).count();
+        System.out.println("Szegediek száma: " + szegedCount);
     }
 }
